@@ -26,10 +26,10 @@ class UsuariosFixture extends TestFixture
         'bairro' => ['type' => 'string', 'length' => 220, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
         'cidade' => ['type' => 'string', 'length' => 220, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
         'estado' => ['type' => 'string', 'length' => 220, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
-        'created' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => false, 'default' => null, 'comment' => ''],
-        'modifed' => ['type' => 'datetime', 'length' => null, 'precision' => null, 'null' => true, 'default' => null, 'comment' => ''],
+        'numero' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'email' => ['type' => 'unique', 'columns' => ['email'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'MyISAM',
@@ -55,8 +55,7 @@ class UsuariosFixture extends TestFixture
                 'bairro' => 'Lorem ipsum dolor sit amet',
                 'cidade' => 'Lorem ipsum dolor sit amet',
                 'estado' => 'Lorem ipsum dolor sit amet',
-                'created' => '2021-09-28 14:13:53',
-                'modifed' => '2021-09-28 14:13:53',
+                'numero' => 'Lorem ipsum dolor ',
             ],
         ];
         parent::init();

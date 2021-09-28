@@ -5,7 +5,7 @@
  */
 ?>
 <div class="usuarios index content">
-    <?= $this->Html->link(__('New Usuario'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Novo Cliente'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Usuarios') ?></h3>
     <div class="table-responsive">
         <table>
@@ -17,12 +17,11 @@
                     <th><?= $this->Paginator->sort('telefone') ?></th>
                     <th><?= $this->Paginator->sort('cep') ?></th>
                     <th><?= $this->Paginator->sort('rua') ?></th>
+                    <th><?= $this->Paginator->sort('numero') ?></th>
                     <th><?= $this->Paginator->sort('bairro') ?></th>
                     <th><?= $this->Paginator->sort('cidade') ?></th>
                     <th><?= $this->Paginator->sort('estado') ?></th>
-                    <th><?= $this->Paginator->sort('created') ?></th>
-                    <th><?= $this->Paginator->sort('modifed') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -34,15 +33,14 @@
                     <td><?= h($usuario->telefone) ?></td>
                     <td><?= h($usuario->cep) ?></td>
                     <td><?= h($usuario->rua) ?></td>
+                    <td><?= h($usuario->numero) ?></td>
                     <td><?= h($usuario->bairro) ?></td>
                     <td><?= h($usuario->cidade) ?></td>
                     <td><?= h($usuario->estado) ?></td>
-                    <td><?= h($usuario->created) ?></td>
-                    <td><?= h($usuario->modifed) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $usuario->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usuario->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $usuario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->id)]) ?>
+                        <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $usuario->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $usuario->id]) ?>
+                        <?= $this->Form->postLink(__('Apagar'), ['action' => 'delete', $usuario->id], ['confirm' => __('Tem certeza que quer apagar ?', $usuario->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -51,11 +49,11 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('Primeiro')) ?>
+            <?= $this->Paginator->prev('< ' . __('Voltar')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('Próximo') . ' >') ?>
+            <?= $this->Paginator->last(__('Ultimo') . ' >>') ?>
         </ul>
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>

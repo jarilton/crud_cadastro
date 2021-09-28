@@ -20,7 +20,7 @@
         <div class="usuarios form content">
             <?= $this->Form->create($usuario) ?>
             <fieldset>
-                <legend><?= __('Edit Usuario') ?></legend>
+                <legend><?= __('Editar Cliente') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                     echo $this->Form->control('email');
@@ -30,11 +30,13 @@
                     echo $this->Form->control('bairro');
                     echo $this->Form->control('cidade');
                     echo $this->Form->control('estado');
-                    echo $this->Form->control('modifed', ['empty' => true]);
+                    echo $this->Form->control('numero');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Editar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>
 </div>
+
+<?php echo $this->Html->script('buscaCep') ?>

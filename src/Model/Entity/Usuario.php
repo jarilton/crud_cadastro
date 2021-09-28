@@ -17,8 +17,7 @@ use Cake\ORM\Entity;
  * @property string $bairro
  * @property string $cidade
  * @property string $estado
- * @property \Cake\I18n\FrozenTime $created
- * @property \Cake\I18n\FrozenTime|null $modifed
+ * @property string $numero
  */
 class Usuario extends Entity
 {
@@ -40,7 +39,6 @@ class Usuario extends Entity
         'bairro' => true,
         'cidade' => true,
         'estado' => true,
-        'created' => true,
-        'modifed' => true,
+        'numero' => true,
     ];
 }

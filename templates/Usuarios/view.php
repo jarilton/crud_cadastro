@@ -51,16 +51,12 @@
                     <td><?= h($usuario->estado) ?></td>
                 </tr>
                 <tr>
+                    <th><?= __('Numero') ?></th>
+                    <td><?= h($usuario->numero) ?></td>
+                </tr>
+                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($usuario->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($usuario->created) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Modifed') ?></th>
-                    <td><?= h($usuario->modifed) ?></td>
                 </tr>
             </table>
         </div>
